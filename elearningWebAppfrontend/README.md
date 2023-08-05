@@ -15,10 +15,6 @@ _Option available( for Logged in user)_
 `>6.Personal chat(anyone) `
 `>7.Video conference(based on Mesh methodology) (anyone)`
 
-# Demo
-
-[https://youtu.be/F9eYfIAQJrM](https://youtu.be/F9eYfIAQJrM)
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -7,6 +7,7 @@ const Createclasshandler=require('./Routers/createclass');
 const Joinclasshandler=require('./Routers/joinclass');
 //const Deleteuserhandler =require('./Routers/deleteuser');
 //const Deleteclasshandler=require('./Routers/deleteclass');
+//github.com/Rik2907/eLearning_app
 const broadcasthandler=require('./Routers/broadcasthandler');
 const posthandler=require('./Routers/posthandler');
 const FetchAssHandler=require('./Routers/FetchAssHandler');
@@ -84,29 +85,14 @@ socket.to(doc.adminuid).emit("waiting",user.uid,user.name,user.picture);
                 }
             })
        //    socket.join(code);
-          //  socket.to(code).emit("newuser",socket.id);
-        }
-    })
-    socket.on("allow", (code,userid)=>{
-        const person=new Allowed({
-            code:code,
-            uid:userid
-        });
-        person.save((err)=>{
-            if(!err){
-                socket.to(userid).emit("joinnow",code);
-            }
-        })
-     
-    })
-
-    socket.on("remove",(id,code)=>{
-socket.to(code).emit("removeFrame",id);
+      moveFrame",id);
     })
 })   */
 app.use('/classroom',cors(corsOptions),Fetchclasshandler);
 app.use('/newclass',cors(corsOptions),Createclasshandler);
 app.use('/joinclass',cors(corsOptions),Joinclasshandler);
+
+
 //app.use('/removeuser',Deleteuserhandler);
 //app.use('/removeclass',Deleteclasshandler);
 app.use('/broadcast',cors(corsOptions),broadcasthandler);
